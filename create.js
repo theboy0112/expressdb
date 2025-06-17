@@ -2,7 +2,7 @@ const runQuery = require('./connection');
 
 module.exports = async (username, password) => {
     try {
-        const query = 'INSERT INTO accounts (username, password) VALUES (?, ?)';
+        const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
         const result = await runQuery(query, [username, password]);
         console.log('Account inserted:', result);
     } catch (error) {
